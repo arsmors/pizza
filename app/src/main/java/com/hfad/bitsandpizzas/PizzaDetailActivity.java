@@ -27,6 +27,9 @@ public class PizzaDetailActivity extends AppCompatActivity {
         String pizzaName = Pizza.pizzas[pizzaId].getName();
         TextView textView = (TextView)findViewById(R.id.pizza_text);
         textView.setText(pizzaName);
+        String pizzaInfo = Pizza.pizzas[pizzaId].getInfo();
+        TextView textView1 = (TextView)findViewById(R.id.pizza_info);
+        textView1.setText(pizzaInfo);
         int pizzaImage = Pizza.pizzas[pizzaId].getImageResourceId();
         ImageView imageView = (ImageView)findViewById(R.id.pizza_image);
         imageView.setImageDrawable(ContextCompat.getDrawable(this, pizzaImage));
